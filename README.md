@@ -26,3 +26,13 @@
   self.checkboxBtn.titleFont = UIFont.systemFontOfSize(15.0);
   self.checkboxBtn.privateDelegate = self;
  ```
+ 
+ #### 可上下对齐的Label `AJLabel`
+ ```swift
+ let testLabel = AJLabel(frame: CGRectMake(20.0, 200.0, 100.0, 40.0));
+ testLabel.backgroundColor = UIColor.lightGrayColor();
+ testLabel.verticalTextAlignment = .Top; // 垂直方向对齐方式
+ testLabel.textEdgeInsets = UIEdgeInsetsMake(0.0, 8.0, 0.0, 0.0); // 边间距
+ testLabel.text = "测试Label";
+ self.view.addSubview(testLabel);
+ ```
