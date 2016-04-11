@@ -27,7 +27,7 @@
   self.checkboxBtn.privateDelegate = self;
  ```
  
- #### 可上下对齐的Label `AJLabel`
+#### 可上下对齐的Label `AJLabel`
  ```swift
  let testLabel = AJLabel(frame: CGRectMake(20.0, 200.0, 100.0, 40.0));
  testLabel.backgroundColor = UIColor.lightGrayColor();
