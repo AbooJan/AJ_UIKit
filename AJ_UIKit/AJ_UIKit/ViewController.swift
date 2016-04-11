@@ -34,6 +34,15 @@ class ViewController: UIViewController, AJCheckboxDelegate{
 //        self.checkboxBtn.title = "checkbox标题";
 //        self.checkboxBtn.titleFont = UIFont.systemFontOfSize(15.0);
         self.checkboxBtn.privateDelegate = self;
+        
+        // Label
+        let testLabel = AJLabel(frame: CGRectMake(20.0, 200.0, 100.0, 40.0));
+        testLabel.backgroundColor = UIColor.lightGrayColor();
+        testLabel.verticalTextAlignment = .Top;
+        testLabel.textEdgeInsets = UIEdgeInsetsMake(0.0, 8.0, 0.0, 0.0);
+        testLabel.text = "测试Label";
+        self.view.addSubview(testLabel);
+        
     }
 
     
