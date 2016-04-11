@@ -25,20 +25,11 @@ class AJCheckBox: UIButton {
 
     
     weak var privateDelegate : AJCheckboxDelegate? ;
-    /// 勾选时的图片
-    var checkedImage:UIImage! = UIImage(named: CommonDefine().imageName("ic_check_1")!);
-    /// 未勾选时的图片
-    var uncheckedImage:UIImage! = UIImage(named: "ic_check_0");
-    /// 是否勾选
-    var isCheck:Bool = false;
     /// 是否可以勾选
     var canCheck:Bool = true;
-    /// 标题
-    var title:String? ;
-    /// 标题字体
-    var titleFont:UIFont? ;
     
     // MARK: - 重写SET
+    
     /// 勾选框图片的对齐样式
     var checkboxImageAlignment:CheckboxImageAlignment = .Left {
         didSet{
@@ -53,25 +44,81 @@ class AJCheckBox: UIButton {
             self.customTitleLabel?.textAlignment = .Left;
             
             // 修改布局
-            var checkboxImageFrame = self.checkboxImageView?.frame;
-            checkboxImageFrame?.origin.x = 0;
-            self.checkboxImageView?.frame = checkboxImageFrame!;
-            
-            var titleLabelFrame = self.customTitleLabel?.frame;
-            titleLabelFrame?.origin.x = CGRectGetMaxX(checkboxImageFrame!) + kDefaultBorderWidth;
-            self.customTitleLabel?.frame = titleLabelFrame!;
+            self.checkboxImageView?.x = 0.0;
+            self.customTitleLabel?.x = CGRectGetMaxX((self.checkboxImageView?.frame)!) + kDefaultBorderWidth;
             
         case .Right:
             self.customTitleLabel?.textAlignment = .Right;
             
             // 修改布局
-            var checkboxImageFrame = self.checkboxImageView?.frame;
-            checkboxImageFrame?.origin.x = self.bounds.size.width - (checkboxImageFrame?.size.width)!;
-            self.checkboxImageView?.frame = checkboxImageFrame!;
-            
+            self.checkboxImageView?.x = self.width - (self.checkboxImageView?.width)!;
+            self.customTitleLabel?.x = kDefaultBorderWidth;
             
         }
     }
+    
+    /// 是否勾选
+    var isCheck:Bool = false{
+        didSet{
+            if isCheck {
+                self.checkboxImageView?.image = self.checkedImage;
+            }else{
+                self.checkboxImageView?.image = self.uncheckedImage;
+            }
+        }
+    };
+    
+    /// 标题
+    var title:String? {
+        didSet{
+            self.customTitleLabel?.text = title;
+            self.setTitle(nil, forState: .Normal);
+        }
+    };
+    
+    /// 标题字体
+    var titleFont:UIFont? {
+        didSet{
+            self.customTitleLabel?.font = titleFont;
+        }
+    };
+    
+    /// 勾选时的图片
+    var checkedImage:UIImage! = UIImage(named: CommonDefine().imageName("ic_check_1")!) {
+        didSet{
+            if self.isCheck {
+                self.checkboxImageView?.image = checkedImage;
+            }
+        }
+    };
+    
+    /// 未勾选时的图片
+    var uncheckedImage:UIImage! = UIImage(named: CommonDefine().imageName("ic_check_0")!) {
+        didSet{
+            if !self.isCheck {
+                self.checkboxImageView?.image = uncheckedImage;
+            }
+        }
+    };
+    
+    override func setTitleColor(color: UIColor?, forState state: UIControlState) {
+        self.customTitleLabel?.textColor = color;
+    }
+    
+    override func beginTrackingWithTouch(touch: UITouch, withEvent event: UIEvent?) -> Bool {
+        if self.canCheck {
+            if self.isCheck {
+                self.isCheck = false;
+            }else{
+                self.isCheck = true;
+            }
+        }
+        
+        self.privateDelegate?.checkbox(self, isCheck: self.isCheck);
+        
+        return super.beginTrackingWithTouch(touch, withEvent: event);
+    }
+    
     
     
     // MARK: - 初始化
@@ -89,29 +136,29 @@ class AJCheckBox: UIButton {
     
     
     func setupViews(){
-        // 默认值
-        self.checkboxImageAlignment = .Left;
-        self.title = self.titleForState(.Normal);
-        self.titleFont = self.titleLabel?.font;
         
-        var checkboxImageViewWidth = self.bounds.size.height - 2 * kDefaultBorderWidth;
+        var checkboxImageViewWidth = self.height - 2 * kDefaultBorderWidth;
         if (checkboxImageViewWidth > 19.0) {
             checkboxImageViewWidth = 19.0;
         }
         let checkboxImageViewHeight = checkboxImageViewWidth;
-        let titleLabelWidth = self.bounds.size.width - checkboxImageViewWidth - 2 * kDefaultBorderWidth;
+        let titleLabelWidth = self.width - checkboxImageViewWidth - 2 * kDefaultBorderWidth;
         
         // 添加checkbox图片
         self.checkboxImageView = UIImageView(frame: CGRectMake(kDefaultBorderWidth, kDefaultBorderWidth, checkboxImageViewWidth, checkboxImageViewHeight));
-        self.checkboxImageView!.center = CGPointMake(kDefaultBorderWidth + checkboxImageViewWidth / 2.0, self.bounds.size.height / 2.0);
+        self.checkboxImageView!.center = CGPointMake(kDefaultBorderWidth + checkboxImageViewWidth / 2.0, self.height / 2.0);
         addSubview(self.checkboxImageView!);
         
         // 添加标题
-        self.customTitleLabel = UILabel(frame: CGRectMake(checkboxImageViewWidth + kDefaultBorderWidth, 0, titleLabelWidth, self.bounds.size.height));
+        self.customTitleLabel = UILabel(frame: CGRectMake(checkboxImageViewWidth + kDefaultBorderWidth, 0, titleLabelWidth, self.height));
         addSubview(self.customTitleLabel!);
+        
+        // 默认值
+        self.checkboxImageAlignment = .Left;
+        self.title = self.titleForState(.Normal);
+        self.titleFont = self.titleLabel?.font;
+        self.isCheck = false;
     }
     
-    
-
     
 }

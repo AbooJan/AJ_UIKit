@@ -8,11 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AJCheckboxDelegate{
 
+    @IBOutlet weak var checkboxBtn: AJCheckBox!;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // CommonButton
         let testBtn = CommonButton(type: .Custom);
         testBtn.frame = CGRectMake(20.0, 90.0, 100.0, 40.0);
         testBtn.backgroundColor = UIColor.orangeColor();
@@ -21,6 +24,16 @@ class ViewController: UIViewController {
         testBtn.addTarget(self, action: #selector(ViewController.testBtnClick(_:)), forControlEvents: .TouchUpInside);
         
         self.view.addSubview(testBtn);
+        
+        // checkbox
+//        self.checkboxBtn.checkboxImageAlignment = .Right;
+//        self.checkboxBtn.checkedImage = UIImage(named: "ic_check_1");
+//        self.checkboxBtn.uncheckedImage = UIImage(named: "ic_check_0");
+//        self.checkboxBtn.isCheck = true;
+//        self.checkboxBtn.canCheck = false;
+//        self.checkboxBtn.title = "checkbox标题";
+//        self.checkboxBtn.titleFont = UIFont.systemFontOfSize(15.0);
+        self.checkboxBtn.privateDelegate = self;
     }
 
     
@@ -33,6 +46,10 @@ class ViewController: UIViewController {
         print("测试按钮：\(sender)");
     }
 
+    // MARK: 代理
+    func checkbox(checkbox: AJCheckBox, isCheck: Bool) {
+        print("忘记密码：\(isCheck)");
+    }
 
 }
 

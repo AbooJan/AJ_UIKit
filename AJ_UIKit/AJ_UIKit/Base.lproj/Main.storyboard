@@ -32,13 +32,30 @@
                                     <action selector="loginBtnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4my-8x-eel"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8q-93-owR" customClass="AJCheckBox" customModule="AJ_UIKit" customModuleProvider="target">
+                                <rect key="frame" x="135" y="40" width="120" height="40"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="NPv-j6-PKY"/>
+                                    <constraint firstAttribute="width" constant="120" id="sAO-bT-HJM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="忘记密码">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="s8q-93-owR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Fvt-Hs-36T"/>
                             <constraint firstItem="ab2-GA-NMA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="J63-QD-XZr"/>
+                            <constraint firstItem="s8q-93-owR" firstAttribute="leading" secondItem="ab2-GA-NMA" secondAttribute="trailing" constant="15" id="J9g-gb-Phj"/>
                             <constraint firstItem="ab2-GA-NMA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="j2N-Vx-umv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="checkboxBtn" destination="s8q-93-owR" id="kku-jm-1h0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
