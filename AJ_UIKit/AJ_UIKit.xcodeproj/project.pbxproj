@@ -16,6 +16,8 @@
 		CC4E15381CBA4E73003E8EA5 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E15361CBA4E73003E8EA5 /* CommonButton.swift */; };
 		CC4E153C1CBA4F31003E8EA5 /* AJ_UIKit_Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CC4E153B1CBA4F31003E8EA5 /* AJ_UIKit_Resource.bundle */; };
 		CC4E153E1CBA5816003E8EA5 /* CommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4E153D1CBA5816003E8EA5 /* CommonDefine.swift */; };
+		DB30F65C1CBC9A94004529F5 /* AJTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30F65B1CBC9A94004529F5 /* AJTextView.swift */; };
+		DB30F65E1CBCD766004529F5 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB30F65D1CBCD766004529F5 /* StringExtension.swift */; };
 		DB6611D41CBB8C6400C9C8B8 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6611D31CBB8C6400C9C8B8 /* UIViewExtension.swift */; };
 		DB6611D61CBBAB3E00C9C8B8 /* AJLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6611D51CBBAB3E00C9C8B8 /* AJLabel.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +34,8 @@
 		CC4E15361CBA4E73003E8EA5 /* CommonButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
 		CC4E153B1CBA4F31003E8EA5 /* AJ_UIKit_Resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AJ_UIKit_Resource.bundle; sourceTree = "<group>"; };
 		CC4E153D1CBA5816003E8EA5 /* CommonDefine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonDefine.swift; sourceTree = "<group>"; };
+		DB30F65B1CBC9A94004529F5 /* AJTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AJTextView.swift; sourceTree = "<group>"; };
+		DB30F65D1CBCD766004529F5 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		DB6611D31CBB8C6400C9C8B8 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		DB6611D51CBBAB3E00C9C8B8 /* AJLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AJLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -84,8 +88,10 @@
 				CC4E15351CBA4E73003E8EA5 /* AJCheckBox.swift */,
 				CC4E15361CBA4E73003E8EA5 /* CommonButton.swift */,
 				CC4E153D1CBA5816003E8EA5 /* CommonDefine.swift */,
-				DB6611D31CBB8C6400C9C8B8 /* UIViewExtension.swift */,
 				DB6611D51CBBAB3E00C9C8B8 /* AJLabel.swift */,
+				DB30F65B1CBC9A94004529F5 /* AJTextView.swift */,
+				DB6611D31CBB8C6400C9C8B8 /* UIViewExtension.swift */,
+				DB30F65D1CBCD766004529F5 /* StringExtension.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -167,7 +173,9 @@
 				CC4E15251CBA4B77003E8EA5 /* ViewController.swift in Sources */,
 				CC4E15231CBA4B77003E8EA5 /* AppDelegate.swift in Sources */,
 				CC4E15381CBA4E73003E8EA5 /* CommonButton.swift in Sources */,
+				DB30F65E1CBCD766004529F5 /* StringExtension.swift in Sources */,
 				CC4E153E1CBA5816003E8EA5 /* CommonDefine.swift in Sources */,
+				DB30F65C1CBC9A94004529F5 /* AJTextView.swift in Sources */,
 				CC4E15371CBA4E73003E8EA5 /* AJCheckBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

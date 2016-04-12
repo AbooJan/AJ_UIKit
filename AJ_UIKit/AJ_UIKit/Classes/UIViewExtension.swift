@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
     
-    var x:CGFloat {
+    var aj_x:CGFloat {
         
         set{
             var changeFrame:CGRect = self.frame;
@@ -23,7 +23,7 @@ extension UIView {
         }
     }
     
-    var y:CGFloat {
+    var aj_y:CGFloat {
         
         set{
             var changeFrame:CGRect = self.frame;
@@ -36,7 +36,7 @@ extension UIView {
         }
     }
     
-    var width:CGFloat {
+    var aj_width:CGFloat {
         
         set{
             var changeFrame:CGRect = self.frame;
@@ -49,7 +49,7 @@ extension UIView {
         }
     }
     
-    var height:CGFloat {
+    var aj_height:CGFloat {
         
         set{
             var changeFrame:CGRect = self.frame;
@@ -64,13 +64,13 @@ extension UIView {
     
     var right:CGFloat {
         get{
-            return self.x + self.width;
+            return self.aj_x + self.aj_width;
         }
     }
     
     var bottom:CGFloat {
         get{
-            return self.y + self.height;
+            return self.aj_y + self.aj_height;
         }
     }
     

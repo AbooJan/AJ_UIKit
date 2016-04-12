@@ -11,9 +11,15 @@ import UIKit
 class ViewController: UIViewController, AJCheckboxDelegate{
 
     @IBOutlet weak var checkboxBtn: AJCheckBox!;
+    @IBOutlet weak var testTV: AJTextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.endEdit));
+        tapGesture.numberOfTapsRequired = 1;
+        tapGesture.numberOfTouchesRequired = 1;
+        self.view.addGestureRecognizer(tapGesture);
         
         // CommonButton
         let testBtn = CommonButton(type: .Custom);
@@ -43,6 +49,15 @@ class ViewController: UIViewController, AJCheckboxDelegate{
         testLabel.text = "测试Label";
         self.view.addSubview(testLabel);
         
+        // TextView
+        testTV.maxLetterCount = 20;
+        testTV.isShowLetterCount = true;
+//        testTV.limitContentLength = true;
+        testTV.placeholder = "请输入内容";
+    }
+    
+    func endEdit() {
+        self.view.endEditing(true);
     }
 
     

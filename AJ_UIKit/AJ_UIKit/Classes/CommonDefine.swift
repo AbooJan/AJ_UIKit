@@ -9,6 +9,7 @@
 import UIKit
 
 class CommonDefine: NSObject {
+    
     final let CORNER_RADIUS:CGFloat = 5.0;
     
     func imageName(name: String) -> String? {

@@ -44,15 +44,15 @@ class AJCheckBox: UIButton {
             self.customTitleLabel?.textAlignment = .Left;
             
             // 修改布局
-            self.checkboxImageView?.x = 0.0;
-            self.customTitleLabel?.x = CGRectGetMaxX((self.checkboxImageView?.frame)!) + kDefaultBorderWidth;
+            self.checkboxImageView?.aj_x = 0.0;
+            self.customTitleLabel?.aj_x = CGRectGetMaxX((self.checkboxImageView?.frame)!) + kDefaultBorderWidth;
             
         case .Right:
             self.customTitleLabel?.textAlignment = .Right;
             
             // 修改布局
-            self.checkboxImageView?.x = self.width - (self.checkboxImageView?.width)!;
-            self.customTitleLabel?.x = kDefaultBorderWidth;
+            self.checkboxImageView?.aj_x = self.aj_width - (self.checkboxImageView?.aj_width)!;
+            self.customTitleLabel?.aj_x = kDefaultBorderWidth;
             
         }
     }
@@ -137,20 +137,20 @@ class AJCheckBox: UIButton {
     
     func setupViews(){
         
-        var checkboxImageViewWidth = self.height - 2 * kDefaultBorderWidth;
+        var checkboxImageViewWidth = self.aj_height - 2 * kDefaultBorderWidth;
         if (checkboxImageViewWidth > 19.0) {
             checkboxImageViewWidth = 19.0;
         }
         let checkboxImageViewHeight = checkboxImageViewWidth;
-        let titleLabelWidth = self.width - checkboxImageViewWidth - 2 * kDefaultBorderWidth;
+        let titleLabelWidth = self.aj_width - checkboxImageViewWidth - 2 * kDefaultBorderWidth;
         
         // 添加checkbox图片
         self.checkboxImageView = UIImageView(frame: CGRectMake(kDefaultBorderWidth, kDefaultBorderWidth, checkboxImageViewWidth, checkboxImageViewHeight));
-        self.checkboxImageView!.center = CGPointMake(kDefaultBorderWidth + checkboxImageViewWidth / 2.0, self.height / 2.0);
+        self.checkboxImageView!.center = CGPointMake(kDefaultBorderWidth + checkboxImageViewWidth / 2.0, self.aj_height / 2.0);
         addSubview(self.checkboxImageView!);
         
         // 添加标题
-        self.customTitleLabel = UILabel(frame: CGRectMake(checkboxImageViewWidth + kDefaultBorderWidth, 0, titleLabelWidth, self.height));
+        self.customTitleLabel = UILabel(frame: CGRectMake(checkboxImageViewWidth + kDefaultBorderWidth, 0, titleLabelWidth, self.aj_height));
         addSubview(self.customTitleLabel!);
         
         // 默认值

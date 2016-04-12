@@ -44,17 +44,30 @@
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jyx-i4-t2I" customClass="AJTextView" customModule="AJ_UIKit" customModuleProvider="target">
+                                <rect key="frame" x="8" y="472" width="584" height="120"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="Qxk-c4-asl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.94117647409439087" green="0.94117647409439087" blue="0.94117647409439087" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="s8q-93-owR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="Fvt-Hs-36T"/>
                             <constraint firstItem="ab2-GA-NMA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="J63-QD-XZr"/>
                             <constraint firstItem="s8q-93-owR" firstAttribute="leading" secondItem="ab2-GA-NMA" secondAttribute="trailing" constant="15" id="J9g-gb-Phj"/>
+                            <constraint firstItem="jyx-i4-t2I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="8" id="MQK-aE-Vgc"/>
                             <constraint firstItem="ab2-GA-NMA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="j2N-Vx-umv"/>
+                            <constraint firstAttribute="trailing" secondItem="jyx-i4-t2I" secondAttribute="trailing" constant="8" id="uV9-Zh-PkA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jyx-i4-t2I" secondAttribute="bottom" constant="8" id="ysp-I3-L9Y"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="checkboxBtn" destination="s8q-93-owR" id="kku-jm-1h0"/>
+                        <outlet property="testTV" destination="jyx-i4-t2I" id="EvB-ow-6h0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
