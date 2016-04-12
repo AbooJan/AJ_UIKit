@@ -23,7 +23,7 @@ class AJTextView: UITextView {
     /// 是否限制最大输入长度,默认不限制
     var limitContentLength:Bool? = false ;
     /// 是否超出最大长度
-    var isOverMaxLength:Bool? = false;
+    private(set) var isOverMaxLength:Bool? = false;
     
     private var placeHolderLabel:UILabel? ;
     private var letterCountLabel:UILabel? ;

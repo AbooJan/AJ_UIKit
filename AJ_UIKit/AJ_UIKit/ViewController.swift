@@ -54,6 +54,7 @@ class ViewController: UIViewController, AJCheckboxDelegate{
         testTV.isShowLetterCount = true;
 //        testTV.limitContentLength = true;
         testTV.placeholder = "请输入内容";
+        print("是否超出字数：\(testTV.isOverMaxLength)");
     }
     
     func endEdit() {
