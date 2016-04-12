@@ -36,3 +36,11 @@
  testLabel.text = "测试Label";
  self.view.addSubview(testLabel);
  ```
+#### 类似TextField 的TextView `AJTextView`
+```swift
+ testTV.maxLetterCount = 20;
+ testTV.isShowLetterCount = true;
+ //  testTV.limitContentLength = true;
+ //  testTV.isOverMaxLength 
+ testTV.placeholder = "请输入内容";
+```
