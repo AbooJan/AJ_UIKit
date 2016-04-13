@@ -40,7 +40,7 @@
 ```swift
  testTV.maxLetterCount = 20;
  testTV.isShowLetterCount = true;
- //  testTV.limitContentLength = true;
- //  testTV.isOverMaxLength 
+// testTV.limitContentLength = true;
  testTV.placeholder = "请输入内容";
+ print("是否超出字数：\(testTV.isOverMaxLength)");
 ```
