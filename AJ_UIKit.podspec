@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
     s.platform          = :ios, '8.0'   
     s.ios.deployment_target = '8.0'               
     s.requires_arc      = true   
-    s.source_files      = 'AJ_UIKit/AJ_UIKit/AJ_UIKit/Classes/*.swift'    
-    s.resources         = 'AJ_UIKit/AJ_UIKit/AJ_UIKit/Classes/AJ_UIKit_Resource.bundle'             
+    s.source_files      = 'AJ_UIKit/AJ_UIKit/Classes/*.swift'    
+    s.resources         = 'AJ_UIKit/AJ_UIKit/Classes/AJ_UIKit_Resource.bundle'             
     s.frameworks        = 'UIKit', 'Foundation'   
 end
