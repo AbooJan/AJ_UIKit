@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CC4E151E1CBA4B77003E8EA5"
-               BuildableName = "AJ_UIKit.app"
-               BlueprintName = "AJ_UIKit"
+               BlueprintIdentifier = "DB7130181CBF4D4500E0CAE3"
+               BuildableName = "AJ_UIKit_Carthage.framework"
+               BlueprintName = "AJ_UIKit_Carthage"
                ReferencedContainer = "container:AJ_UIKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC4E151E1CBA4B77003E8EA5"
-            BuildableName = "AJ_UIKit.app"
-            BlueprintName = "AJ_UIKit"
-            ReferencedContainer = "container:AJ_UIKit.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC4E151E1CBA4B77003E8EA5"
-            BuildableName = "AJ_UIKit.app"
-            BlueprintName = "AJ_UIKit"
+            BlueprintIdentifier = "DB7130181CBF4D4500E0CAE3"
+            BuildableName = "AJ_UIKit_Carthage.framework"
+            BlueprintName = "AJ_UIKit_Carthage"
             ReferencedContainer = "container:AJ_UIKit.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CC4E151E1CBA4B77003E8EA5"
-            BuildableName = "AJ_UIKit.app"
-            BlueprintName = "AJ_UIKit"
+            BlueprintIdentifier = "DB7130181CBF4D4500E0CAE3"
+            BuildableName = "AJ_UIKit_Carthage.framework"
+            BlueprintName = "AJ_UIKit_Carthage"
             ReferencedContainer = "container:AJ_UIKit.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
