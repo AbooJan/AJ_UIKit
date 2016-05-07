@@ -1,4 +1,7 @@
 # AJ_UIKit
+
+[![ghit.me](https://ghit.me/badge.svg?repo=AbooJan/AJ_UIKit)](https://ghit.me/repo/AbooJan/AJ_UIKit)
+
 一些常用的UI控件封装, 支持Storyboard和纯代码
 
 --
